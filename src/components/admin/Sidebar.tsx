@@ -13,11 +13,10 @@ export default function AdminSidebar({ setView }: AdminSidebarProps) {
         <Sidebar>
             <SidebarHeader>
                 <div className="flex items-center gap-2">
-                    <Link href="/" className="flex items-center gap-2">
-                        <Sprout className="h-7 w-7 text-primary" />
-                        <span className="font-headline text-2xl font-bold text-foreground">BloomTrack</span>
+                    <Link href="/" className="flex items-center gap-2" target="_blank" rel="noopener noreferrer">
+                        <Sprout className="h-7 w-7 text-sidebar-primary" />
+                        <span className="font-headline text-2xl font-bold text-sidebar-foreground">BloomTrack</span>
                     </Link>
-                    <SidebarTrigger />
                 </div>
             </SidebarHeader>
             <SidebarContent>
@@ -96,6 +95,9 @@ export default function AdminSidebar({ setView }: AdminSidebarProps) {
                     </SidebarMenuItem>
                 </SidebarMenu>
             </SidebarContent>
+             <SidebarFooter>
+                <SidebarTrigger className="w-full" />
+            </SidebarFooter>
         </Sidebar>
     );
 }

@@ -10,8 +10,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Alegreya', 'serif'],
-        headline: ['Belleza', 'sans-serif'],
+        body: ['var(--font-figtree)', 'sans-serif'],
+        headline: ['"Playfair Display"', 'serif'],
         code: ['monospace'],
       },
       colors: {

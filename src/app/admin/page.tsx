@@ -13,7 +13,7 @@ import StockTaking from '@/components/admin/StockTaking';
 import HRManager from '@/components/admin/HRManager';
 import AccountsManager from '@/components/admin/AccountsManager';
 import Reports from '@/components/admin/Reports';
-import { SidebarProvider } from '@/components/ui/sidebar';
+import { SidebarProvider, SidebarInset } from '@/components/ui/sidebar';
 
 export type AdminView =
   | 'dashboard'
@@ -65,12 +65,12 @@ export default function AdminPage() {
 
   return (
     <SidebarProvider>
-        <div className="flex min-h-screen bg-background">
-            <AdminSidebar setView={setView} />
-            <main className="flex-1 p-4 md:p-8 overflow-auto">
-                {renderView()}
-            </main>
-        </div>
+      <AdminSidebar setView={setView} />
+      <SidebarInset>
+        <main className="flex-1 p-4 md:p-8 overflow-auto">
+            {renderView()}
+        </main>
+      </SidebarInset>
     </SidebarProvider>
   );
 }

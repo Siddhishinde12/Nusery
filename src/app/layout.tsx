@@ -3,6 +3,13 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import { Figtree } from 'next/font/google';
+
+const figtree = Figtree({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-figtree',
+});
 
 export const metadata: Metadata = {
   title: 'BloomTrack',
@@ -18,11 +25,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${figtree.variable}`}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-        <link href="https://fonts.googleapis.com/css2?family=Alegreya&family=Belleza&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
       </head>
       <body className="font-body antialiased bg-background text-foreground">
         <div className="flex flex-col min-h-screen">

@@ -11,28 +11,27 @@ type PlantCardProps = {
 
 export default function PlantCard({ plant }: PlantCardProps) {
   return (
-    <Card className="flex flex-col overflow-hidden h-full transition-shadow duration-300 hover:shadow-xl">
-      <CardHeader className="p-0">
-        <div className="relative aspect-[4/3] w-full">
+    <Card className="flex flex-col overflow-hidden h-full transition-shadow duration-300 hover:shadow-xl group">
+      <CardHeader className="p-0 border-b">
+        <div className="relative aspect-[4/3] w-full overflow-hidden">
           <Image
             src={plant.image}
             alt={plant.name}
             data-ai-hint={plant.dataAiHint}
-            width={600}
-            height={400}
-            className="object-cover"
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
           />
         </div>
       </CardHeader>
-      <CardContent className="flex-grow p-4">
-        <div className="flex justify-between items-start gap-2">
-            <CardTitle className="font-headline text-xl mb-1">{plant.name}</CardTitle>
-            <Badge variant={plant.type === 'Indoor' ? 'secondary' : 'outline'} className="whitespace-nowrap">{plant.type}</Badge>
+      <CardContent className="flex-grow p-4 flex flex-col">
+        <div className="flex justify-between items-start gap-2 mb-2">
+            <CardTitle className="font-headline text-xl">{plant.name}</CardTitle>
+            <Badge variant={plant.type === 'Indoor' ? 'secondary' : 'outline'} className="whitespace-nowrap shrink-0">{plant.type}</Badge>
         </div>
-        <CardDescription className="text-muted-foreground text-sm line-clamp-2 h-[2.5em]">{plant.description}</CardDescription>
+        <CardDescription className="text-muted-foreground text-sm line-clamp-3 flex-grow">{plant.description}</CardDescription>
       </CardContent>
-      <CardFooter className="p-4 pt-0 flex justify-between items-center">
-        <p className="text-lg font-bold text-primary">${plant.price.toFixed(2)}</p>
+      <CardFooter className="p-4 pt-2 flex justify-between items-center">
+        <p className="text-2xl font-bold text-primary">${plant.price.toFixed(2)}</p>
         <Button size="sm" className="bg-accent hover:bg-accent/90 text-accent-foreground">
           <ShoppingCart className="mr-2 h-4 w-4" />
           Add to Cart
