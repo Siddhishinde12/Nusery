@@ -1,63 +1,153 @@
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { DollarSign, Package, ShoppingCart, Users } from 'lucide-react';
-import { plants, orders } from '@/lib/data';
+'use client';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { DollarSign, ShoppingCart, Package, CreditCard, BookCopy } from 'lucide-react';
 
 export default function Dashboard() {
-    const totalRevenue = orders.reduce((acc, order) => {
-        if (order.status === 'Delivered') {
-            return acc + order.items.reduce((itemAcc, item) => {
-                const plant = plants.find(p => p.id === item.plantId);
-                return itemAcc + (plant ? plant.price * item.quantity : 0);
-            }, 0);
-        }
-        return acc;
-    }, 0);
-
-    const totalOrders = orders.length;
-    const totalPlants = plants.reduce((acc, plant) => acc + plant.quantity, 0);
 
     return (
         <div>
             <h1 className="text-3xl font-bold mb-6">Admin Dashboard</h1>
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 <Card>
                     <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                        <CardTitle className="text-sm font-medium">Total Revenue</CardTitle>
-                        <DollarSign className="h-4 w-4 text-muted-foreground" />
+                        <CardTitle className="text-sm font-medium">Revenue</CardTitle>
+                        <DollarSign className="h-5 w-5 text-muted-foreground" />
                     </CardHeader>
-                    <CardContent>
-                        <div className="text-2xl font-bold">${totalRevenue.toFixed(2)}</div>
-                        <p className="text-xs text-muted-foreground">From delivered orders</p>
+                    <CardContent className="space-y-2">
+                        <div className="flex justify-between items-baseline">
+                            <span className="text-xs text-muted-foreground">Total Revenue</span>
+                            <span className="text-lg font-bold">₹6,144,678.00</span>
+                        </div>
+                         <div className="flex justify-between items-baseline">
+                            <span className="text-xs text-muted-foreground">Yearly Revenue</span>
+                            <span className="text-md font-semibold">₹6,144,678.00</span>
+                        </div>
+                        <div className="flex justify-between items-baseline">
+                            <span className="text-xs text-muted-foreground">Monthly Revenue</span>
+                            <span className="text-md font-semibold">₹222,965.00</span>
+                        </div>
+                        <div className="flex justify-between items-baseline">
+                            <span className="text-xs text-muted-foreground">Daily Revenue</span>
+                            <span className="text-md font-semibold">₹0.00</span>
+                        </div>
                     </CardContent>
                 </Card>
                 <Card>
                     <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                        <CardTitle className="text-sm font-medium">Total Orders</CardTitle>
-                        <ShoppingCart className="h-4 w-4 text-muted-foreground" />
+                        <CardTitle className="text-sm font-medium">Sales</CardTitle>
+                        <ShoppingCart className="h-5 w-5 text-muted-foreground" />
                     </CardHeader>
-                    <CardContent>
-                        <div className="text-2xl font-bold">+{totalOrders}</div>
-                        <p className="text-xs text-muted-foreground">All time</p>
+                    <CardContent className="space-y-2">
+                        <div className="flex justify-between items-baseline">
+                            <span className="text-xs text-muted-foreground">Total Sales</span>
+                            <span className="text-lg font-bold">₹6,144,678.00</span>
+                        </div>
+                         <div className="flex justify-between items-baseline">
+                            <span className="text-xs text-muted-foreground">Yearly Sales</span>
+                            <span className="text-md font-semibold">₹6,144,678.00</span>
+                        </div>
+                        <div className="flex justify-between items-baseline">
+                            <span className="text-xs text-muted-foreground">Monthly Sales</span>
+                            <span className="text-md font-semibold">₹222,965.00</span>
+                        </div>
+                        <div className="flex justify-between items-baseline">
+                            <span className="text-xs text-muted-foreground">Daily Sales</span>
+                             <span className="text-md font-semibold">₹0.00</span>
+                        </div>
                     </CardContent>
                 </Card>
                 <Card>
                     <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                        <CardTitle className="text-sm font-medium">Total Plants in Stock</CardTitle>
-                        <Package className="h-4 w-4 text-muted-foreground" />
+                        <CardTitle className="text-sm font-medium">Purchases</CardTitle>
+                        <Package className="h-5 w-5 text-muted-foreground" />
                     </CardHeader>
-                    <CardContent>
-                        <div className="text-2xl font-bold">{totalPlants}</div>
-                        <p className="text-xs text-muted-foreground">Across all varieties</p>
+                    <CardContent className="space-y-2">
+                        <div className="flex justify-between items-baseline">
+                            <span className="text-xs text-muted-foreground">Total Purchase</span>
+                            <span className="text-lg font-bold">₹8,540,552.00</span>
+                        </div>
+                         <div className="flex justify-between items-baseline">
+                            <span className="text-xs text-muted-foreground">Yearly Purchase</span>
+                            <span className="text-md font-semibold">₹8,540,552.00</span>
+                        </div>
+                        <div className="flex justify-between items-baseline">
+                            <span className="text-xs text-muted-foreground">Monthly Purchase</span>
+                            <span className="text-md font-semibold">₹89,935.00</span>
+                        </div>
+                        <div className="flex justify-between items-baseline">
+                            <span className="text-xs text-muted-foreground">Daily Purchase</span>
+                             <span className="text-md font-semibold">₹0.00</span>
+                        </div>
                     </CardContent>
                 </Card>
-                <Card>
+                 <Card>
                     <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                        <CardTitle className="text-sm font-medium">Unique Customers</CardTitle>
-                        <Users className="h-4 w-4 text-muted-foreground" />
+                        <CardTitle className="text-sm font-medium">Expenses</CardTitle>
+                        <CreditCard className="h-5 w-5 text-muted-foreground" />
                     </CardHeader>
-                    <CardContent>
-                        <div className="text-2xl font-bold">{orders.length}</div>
-                        <p className="text-xs text-muted-foreground">Based on orders</p>
+                    <CardContent className="space-y-2">
+                        <div className="flex justify-between items-baseline">
+                            <span className="text-xs text-muted-foreground">Total Expenses</span>
+                            <span className="text-lg font-bold">₹3,906,843.00</span>
+                        </div>
+                         <div className="flex justify-between items-baseline">
+                            <span className="text-xs text-muted-foreground">Yearly Expenses</span>
+                            <span className="text-md font-semibold">₹3,906,843.00</span>
+                        </div>
+                        <div className="flex justify-between items-baseline">
+                            <span className="text-xs text-muted-foreground">Monthly Expenses</span>
+                            <span className="text-md font-semibold">₹48,474.00</span>
+                        </div>
+                        <div className="flex justify-between items-baseline">
+                            <span className="text-xs text-muted-foreground">Daily Expenses</span>
+                             <span className="text-md font-semibold">₹0.00</span>
+                        </div>
+                    </CardContent>
+                </Card>
+                 <Card className="lg:col-span-2">
+                    <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                        <CardTitle className="text-sm font-medium">Bookings</CardTitle>
+                        <BookCopy className="h-5 w-5 text-muted-foreground" />
+                    </CardHeader>
+                    <CardContent className="space-y-2">
+                       <div className="grid grid-cols-2 gap-x-4">
+                         <div className="space-y-2">
+                            <div className="flex justify-between items-baseline">
+                                <span className="text-xs text-muted-foreground">Total Bookings</span>
+                                <span className="text-lg font-bold">650</span>
+                            </div>
+                            <div className="flex justify-between items-baseline">
+                                <span className="text-xs text-muted-foreground">Yearly Bookings</span>
+                                <span className="text-md font-semibold">650</span>
+                            </div>
+                            <div className="flex justify-between items-baseline">
+                                <span className="text-xs text-muted-foreground">Monthly Bookings</span>
+                                <span className="text-md font-semibold">8</span>
+                            </div>
+                            <div className="flex justify-between items-baseline">
+                                <span className="text-xs text-muted-foreground">Daily Bookings</span>
+                                <span className="text-md font-semibold">2</span>
+                            </div>
+                         </div>
+                         <div className="space-y-2 border-l pl-4">
+                             <div className="flex justify-between items-baseline">
+                                <span className="text-xs text-muted-foreground">Total Plants</span>
+                                <span className="text-lg font-bold">6,902,410</span>
+                            </div>
+                            <div className="flex justify-between items-baseline">
+                                <span className="text-xs text-muted-foreground">Yearly Plants</span>
+                                <span className="text-md font-semibold">6,902,410</span>
+                            </div>
+                            <div className="flex justify-between items-baseline">
+                                <span className="text-xs text-muted-foreground">Monthly Plants</span>
+                                <span className="text-md font-semibold">114,850</span>
+                            </div>
+                            <div className="flex justify-between items-baseline">
+                                <span className="text-xs text-muted-foreground">Daily Plants</span>
+                                <span className="text-md font-semibold">27,000</span>
+                            </div>
+                         </div>
+                       </div>
                     </CardContent>
                 </Card>
             </div>
