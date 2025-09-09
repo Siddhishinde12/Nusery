@@ -16,19 +16,19 @@ export default function Dashboard() {
                     <CardContent className="space-y-2">
                         <div className="flex justify-between items-baseline">
                             <span className="text-xs text-muted-foreground">Total Revenue</span>
-                            <span className="text-lg font-bold">₹6,144,678.00</span>
+                            <span className="text-base font-semibold font-mono">₹6,144,678.00</span>
                         </div>
                          <div className="flex justify-between items-baseline">
                             <span className="text-xs text-muted-foreground">Yearly Revenue</span>
-                            <span className="text-md font-semibold">₹6,144,678.00</span>
+                            <span className="text-sm font-medium font-mono">₹6,144,678.00</span>
                         </div>
                         <div className="flex justify-between items-baseline">
                             <span className="text-xs text-muted-foreground">Monthly Revenue</span>
-                            <span className="text-md font-semibold">₹222,965.00</span>
+                            <span className="text-sm font-medium font-mono">₹222,965.00</span>
                         </div>
                         <div className="flex justify-between items-baseline">
                             <span className="text-xs text-muted-foreground">Daily Revenue</span>
-                            <span className="text-md font-semibold">₹0.00</span>
+                            <span className="text-sm font-medium font-mono">₹0.00</span>
                         </div>
                     </CardContent>
                 </Card>
@@ -40,19 +40,19 @@ export default function Dashboard() {
                     <CardContent className="space-y-2">
                         <div className="flex justify-between items-baseline">
                             <span className="text-xs text-muted-foreground">Total Sales</span>
-                            <span className="text-lg font-bold">₹6,144,678.00</span>
+                            <span className="text-base font-semibold font-mono">₹6,144,678.00</span>
                         </div>
                          <div className="flex justify-between items-baseline">
                             <span className="text-xs text-muted-foreground">Yearly Sales</span>
-                            <span className="text-md font-semibold">₹6,144,678.00</span>
+                            <span className="text-sm font-medium font-mono">₹6,144,678.00</span>
                         </div>
                         <div className="flex justify-between items-baseline">
                             <span className="text-xs text-muted-foreground">Monthly Sales</span>
-                            <span className="text-md font-semibold">₹222,965.00</span>
+                            <span className="text-sm font-medium font-mono">₹222,965.00</span>
                         </div>
                         <div className="flex justify-between items-baseline">
                             <span className="text-xs text-muted-foreground">Daily Sales</span>
-                             <span className="text-md font-semibold">₹0.00</span>
+                             <span className="text-sm font-medium font-mono">₹0.00</span>
                         </div>
                     </CardContent>
                 </Card>
@@ -64,19 +64,19 @@ export default function Dashboard() {
                     <CardContent className="space-y-2">
                         <div className="flex justify-between items-baseline">
                             <span className="text-xs text-muted-foreground">Total Purchase</span>
-                            <span className="text-lg font-bold">₹8,540,552.00</span>
+                            <span className="text-base font-semibold font-mono">₹8,540,552.00</span>
                         </div>
                          <div className="flex justify-between items-baseline">
                             <span className="text-xs text-muted-foreground">Yearly Purchase</span>
-                            <span className="text-md font-semibold">₹8,540,552.00</span>
+                            <span className="text-sm font-medium font-mono">₹8,540,552.00</span>
                         </div>
                         <div className="flex justify-between items-baseline">
                             <span className="text-xs text-muted-foreground">Monthly Purchase</span>
-                            <span className="text-md font-semibold">₹89,935.00</span>
+                            <span className="text-sm font-medium font-mono">₹89,935.00</span>
                         </div>
                         <div className="flex justify-between items-baseline">
                             <span className="text-xs text-muted-foreground">Daily Purchase</span>
-                             <span className="text-md font-semibold">₹0.00</span>
+                             <span className="text-sm font-medium font-mono">₹0.00</span>
                         </div>
                     </CardContent>
                 </Card>
@@ -88,19 +88,19 @@ export default function Dashboard() {
                     <CardContent className="space-y-2">
                         <div className="flex justify-between items-baseline">
                             <span className="text-xs text-muted-foreground">Total Expenses</span>
-                            <span className="text-lg font-bold">₹3,906,843.00</span>
+                            <span className="text-base font-semibold font-mono">₹3,906,843.00</span>
                         </div>
                          <div className="flex justify-between items-baseline">
                             <span className="text-xs text-muted-foreground">Yearly Expenses</span>
-                            <span className="text-md font-semibold">₹3,906,843.00</span>
+                            <span className="text-sm font-medium font-mono">₹3,906,843.00</span>
                         </div>
                         <div className="flex justify-between items-baseline">
                             <span className="text-xs text-muted-foreground">Monthly Expenses</span>
-                            <span className="text-md font-semibold">₹48,474.00</span>
+                            <span className="text-sm font-medium font-mono">₹48,474.00</span>
                         </div>
                         <div className="flex justify-between items-baseline">
                             <span className="text-xs text-muted-foreground">Daily Expenses</span>
-                             <span className="text-md font-semibold">₹0.00</span>
+                             <span className="text-sm font-medium font-mono">₹0.00</span>
                         </div>
                     </CardContent>
                 </Card>
@@ -114,37 +114,37 @@ export default function Dashboard() {
                          <div className="space-y-2">
                             <div className="flex justify-between items-baseline">
                                 <span className="text-xs text-muted-foreground">Total Bookings</span>
-                                <span className="text-lg font-bold">650</span>
+                                <span className="text-base font-semibold font-mono">650</span>
                             </div>
                             <div className="flex justify-between items-baseline">
                                 <span className="text-xs text-muted-foreground">Yearly Bookings</span>
-                                <span className="text-md font-semibold">650</span>
+                                <span className="text-sm font-medium font-mono">650</span>
                             </div>
                             <div className="flex justify-between items-baseline">
                                 <span className="text-xs text-muted-foreground">Monthly Bookings</span>
-                                <span className="text-md font-semibold">8</span>
+                                <span className="text-sm font-medium font-mono">8</span>
                             </div>
                             <div className="flex justify-between items-baseline">
                                 <span className="text-xs text-muted-foreground">Daily Bookings</span>
-                                <span className="text-md font-semibold">2</span>
+                                <span className="text-sm font-medium font-mono">2</span>
                             </div>
                          </div>
                          <div className="space-y-2 border-l pl-4">
                              <div className="flex justify-between items-baseline">
                                 <span className="text-xs text-muted-foreground">Total Plants</span>
-                                <span className="text-lg font-bold">6,902,410</span>
+                                <span className="text-base font-semibold font-mono">6,902,410</span>
                             </div>
                             <div className="flex justify-between items-baseline">
                                 <span className="text-xs text-muted-foreground">Yearly Plants</span>
-                                <span className="text-md font-semibold">6,902,410</span>
+                                <span className="text-sm font-medium font-mono">6,902,410</span>
                             </div>
                             <div className="flex justify-between items-baseline">
                                 <span className="text-xs text-muted-foreground">Monthly Plants</span>
-                                <span className="text-md font-semibold">114,850</span>
+                                <span className="text-sm font-medium font-mono">114,850</span>
                             </div>
                             <div className="flex justify-between items-baseline">
                                 <span className="text-xs text-muted-foreground">Daily Plants</span>
-                                <span className="text-md font-semibold">27,000</span>
+                                <span className="text-sm font-medium font-mono">27,000</span>
                             </div>
                          </div>
                        </div>
