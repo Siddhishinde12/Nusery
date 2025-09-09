@@ -17,6 +17,7 @@ import {
 } from '@/components/ui/select';
 import { orders as initialOrders, type Order, type OrderStatus } from '@/lib/data';
 import { Badge } from '@/components/ui/badge';
+import { Card } from '@/components/ui/card';
 
 export default function OrderManager() {
   const [orders, setOrders] = useState<Order[]>(initialOrders);
@@ -89,6 +90,3 @@ export default function OrderManager() {
     </div>
   );
 }
-
-// Add a Card component to wrap the table for better styling
-import { Card } from '@/components/ui/card';
