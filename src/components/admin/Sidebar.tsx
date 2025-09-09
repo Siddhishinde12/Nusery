@@ -1,10 +1,11 @@
 'use client';
-import { Sidebar, SidebarMenu, SidebarMenuItem, SidebarMenuButton, SidebarHeader, SidebarTrigger } from '@/components/ui/sidebar';
-import { LayoutDashboard, Package, ShoppingCart, Sprout } from 'lucide-react';
+import { Sidebar, SidebarMenu, SidebarMenuItem, SidebarMenuButton, SidebarHeader, SidebarTrigger, SidebarContent, SidebarFooter } from '@/components/ui/sidebar';
+import { LayoutDashboard, Package, ShoppingCart, Sprout, Users, Briefcase, DollarSign, Truck, Factory, ClipboardCheck, Users2, BookUser, BarChart2 } from 'lucide-react';
 import Link from 'next/link';
+import type { AdminView } from '@/app/admin/page';
 
 type AdminSidebarProps = {
-    setView: (view: 'dashboard' | 'plants' | 'orders') => void;
+    setView: (view: AdminView) => void;
 };
 
 export default function AdminSidebar({ setView }: AdminSidebarProps) {
@@ -19,26 +20,82 @@ export default function AdminSidebar({ setView }: AdminSidebarProps) {
                     <SidebarTrigger />
                 </div>
             </SidebarHeader>
-            <SidebarMenu>
-                <SidebarMenuItem>
-                    <SidebarMenuButton onClick={() => setView('dashboard')} tooltip="Dashboard">
-                        <LayoutDashboard />
-                        <span>Dashboard</span>
-                    </SidebarMenuButton>
-                </SidebarMenuItem>
-                <SidebarMenuItem>
-                    <SidebarMenuButton onClick={() => setView('plants')} tooltip="Manage Plants">
-                        <Package />
-                        <span>Plants</span>
-                    </SidebarMenuButton>
-                </SidebarMenuItem>
-                <SidebarMenuItem>
-                    <SidebarMenuButton onClick={() => setView('orders')} tooltip="Manage Orders">
-                        <ShoppingCart />
-                        <span>Orders</span>
-                    </SidebarMenuButton>
-                </SidebarMenuItem>
-            </SidebarMenu>
+            <SidebarContent>
+                <SidebarMenu>
+                    <SidebarMenuItem>
+                        <SidebarMenuButton onClick={() => setView('dashboard')} tooltip="Dashboard">
+                            <LayoutDashboard />
+                            <span>Dashboard</span>
+                        </SidebarMenuButton>
+                    </SidebarMenuItem>
+                    <SidebarMenuItem>
+                        <SidebarMenuButton onClick={() => setView('users')} tooltip="User Management">
+                            <Users />
+                            <span>Users</span>
+                        </SidebarMenuButton>
+                    </SidebarMenuItem>
+                    <SidebarMenuItem>
+                        <SidebarMenuButton onClick={() => setView('clients')} tooltip="Client Management">
+                            <Briefcase />
+                            <span>Clients</span>
+                        </SidebarMenuButton>
+                    </SidebarMenuItem>
+                    <SidebarMenuItem>
+                        <SidebarMenuButton onClick={() => setView('plants')} tooltip="Inventory Management">
+                            <Package />
+                            <span>Inventory</span>
+                        </SidebarMenuButton>
+                    </SidebarMenuItem>
+                    <SidebarMenuItem>
+                        <SidebarMenuButton onClick={() => setView('orders')} tooltip="Order Management">
+                            <ShoppingCart />
+                            <span>Orders</span>
+                        </SidebarMenuButton>
+                    </SidebarMenuItem>
+                    <SidebarMenuItem>
+                        <SidebarMenuButton onClick={() => setView('billing')} tooltip="Billing & Payment">
+                            <DollarSign />
+                            <span>Billing</span>
+                        </SidebarMenuButton>
+                    </SidebarMenuItem>
+                    <SidebarMenuItem>
+                        <SidebarMenuButton onClick={() => setView('dispatch')} tooltip="Dispatch & Transport">
+                            <Truck />
+                            <span>Dispatch</span>
+                        </SidebarMenuButton>
+                    </SidebarMenuItem>
+                    <SidebarMenuItem>
+                        <SidebarMenuButton onClick={() => setView('suppliers')} tooltip="Supplier Management">
+                            <Factory />
+                            <span>Suppliers</span>
+                        </SidebarMenuButton>
+                    </SidebarMenuItem>
+                    <SidebarMenuItem>
+                        <SidebarMenuButton onClick={() => setView('stock_taking')} tooltip="Stock-Taking">
+                            <ClipboardCheck />
+                            <span>Stock-Taking</span>
+                        </SidebarMenuButton>
+                    </SidebarMenuItem>
+                     <SidebarMenuItem>
+                        <SidebarMenuButton onClick={() => setView('hr')} tooltip="HR Management">
+                            <Users2 />
+                            <span>HR</span>
+                        </SidebarMenuButton>
+                    </SidebarMenuItem>
+                    <SidebarMenuItem>
+                        <SidebarMenuButton onClick={() => setView('accounts')} tooltip="Accounts & Expenses">
+                            <BookUser />
+                            <span>Accounts</span>
+                        </SidebarMenuButton>
+                    </SidebarMenuItem>
+                    <SidebarMenuItem>
+                        <SidebarMenuButton onClick={() => setView('reports')} tooltip="Reports">
+                            <BarChart2 />
+                            <span>Reports</span>
+                        </SidebarMenuButton>
+                    </SidebarMenuItem>
+                </SidebarMenu>
+            </SidebarContent>
         </Sidebar>
     );
 }
