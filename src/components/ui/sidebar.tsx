@@ -227,7 +227,6 @@ const Sidebar = React.forwardRef<
           className={cn(
             "duration-200 relative h-svh bg-transparent transition-[width] ease-in-out",
             "w-[--sidebar-width]",
-            "group-data-[collapsible=offcanvas]:w-0",
             "group-data-[collapsible=icon]:w-[--sidebar-width-icon]"
           )}
         />
@@ -314,7 +313,7 @@ const SidebarInset = React.forwardRef<
     <main
       ref={ref}
       className={cn(
-        "relative flex min-h-svh flex-1 flex-col bg-background",
+        "relative flex min-h-svh flex-1 flex-col bg-background md:pl-[--sidebar-width-icon] group-data-[state=expanded]:md:pl-[--sidebar-width]",
         className
       )}
       {...props}

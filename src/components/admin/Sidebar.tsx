@@ -15,7 +15,7 @@ export default function AdminSidebar({ setView }: AdminSidebarProps) {
                 <div className="flex items-center gap-2">
                     <Link href="/" className="flex items-center gap-2" target="_blank" rel="noopener noreferrer">
                         <Sprout className="h-7 w-7 text-sidebar-primary" />
-                        <span className="font-headline text-2xl font-bold text-sidebar-foreground">BloomTrack</span>
+                        <span className="font-headline text-2xl font-bold text-sidebar-foreground group-data-[collapsible=icon]:hidden">BloomTrack</span>
                     </Link>
                 </div>
             </SidebarHeader>
@@ -24,73 +24,73 @@ export default function AdminSidebar({ setView }: AdminSidebarProps) {
                     <SidebarMenuItem>
                         <SidebarMenuButton onClick={() => setView('dashboard')} tooltip="Dashboard">
                             <LayoutDashboard />
-                            <span>Dashboard</span>
+                            <span className="group-data-[collapsible=icon]:hidden">Dashboard</span>
                         </SidebarMenuButton>
                     </SidebarMenuItem>
                     <SidebarMenuItem>
                         <SidebarMenuButton onClick={() => setView('users')} tooltip="User Management">
                             <Users />
-                            <span>Users</span>
+                            <span className="group-data-[collapsible=icon]:hidden">Users</span>
                         </SidebarMenuButton>
                     </SidebarMenuItem>
                     <SidebarMenuItem>
                         <SidebarMenuButton onClick={() => setView('clients')} tooltip="Client Management">
                             <Briefcase />
-                            <span>Clients</span>
+                            <span className="group-data-[collapsible=icon]:hidden">Clients</span>
                         </SidebarMenuButton>
                     </SidebarMenuItem>
                     <SidebarMenuItem>
                         <SidebarMenuButton onClick={() => setView('plants')} tooltip="Inventory Management">
                             <Package />
-                            <span>Inventory</span>
+                            <span className="group-data-[collapsible=icon]:hidden">Inventory</span>
                         </SidebarMenuButton>
                     </SidebarMenuItem>
                     <SidebarMenuItem>
                         <SidebarMenuButton onClick={() => setView('orders')} tooltip="Order Management">
                             <ShoppingCart />
-                            <span>Orders</span>
+                            <span className="group-data-[collapsible=icon]:hidden">Orders</span>
                         </SidebarMenuButton>
                     </SidebarMenuItem>
                     <SidebarMenuItem>
                         <SidebarMenuButton onClick={() => setView('billing')} tooltip="Billing & Payment">
                             <DollarSign />
-                            <span>Billing</span>
+                            <span className="group-data-[collapsible=icon]:hidden">Billing</span>
                         </SidebarMenuButton>
                     </SidebarMenuItem>
                     <SidebarMenuItem>
                         <SidebarMenuButton onClick={() => setView('dispatch')} tooltip="Dispatch & Transport">
                             <Truck />
-                            <span>Dispatch</span>
+                            <span className="group-data-[collapsible=icon]:hidden">Dispatch</span>
                         </SidebarMenuButton>
                     </SidebarMenuItem>
                     <SidebarMenuItem>
                         <SidebarMenuButton onClick={() => setView('suppliers')} tooltip="Supplier Management">
                             <Factory />
-                            <span>Suppliers</span>
+                            <span className="group-data-[collapsible=icon]:hidden">Suppliers</span>
                         </SidebarMenuButton>
                     </SidebarMenuItem>
                     <SidebarMenuItem>
                         <SidebarMenuButton onClick={() => setView('stock_taking')} tooltip="Stock-Taking">
                             <ClipboardCheck />
-                            <span>Stock-Taking</span>
+                            <span className="group-data-[collapsible=icon]:hidden">Stock-Taking</span>
                         </SidebarMenuButton>
                     </SidebarMenuItem>
                      <SidebarMenuItem>
                         <SidebarMenuButton onClick={() => setView('hr')} tooltip="HR Management">
                             <Users2 />
-                            <span>HR</span>
+                            <span className="group-data-[collapsible=icon]:hidden">HR</span>
                         </SidebarMenuButton>
                     </SidebarMenuItem>
                     <SidebarMenuItem>
                         <SidebarMenuButton onClick={() => setView('accounts')} tooltip="Accounts & Expenses">
                             <BookUser />
-                            <span>Accounts</span>
+                            <span className="group-data-[collapsible=icon]:hidden">Accounts</span>
                         </SidebarMenuButton>
                     </SidebarMenuItem>
                     <SidebarMenuItem>
                         <SidebarMenuButton onClick={() => setView('reports')} tooltip="Reports">
                             <BarChart2 />
-                            <span>Reports</span>
+                            <span className="group-data-[collapsible=icon]:hidden">Reports</span>
                         </SidebarMenuButton>
                     </SidebarMenuItem>
                 </SidebarMenu>
