@@ -16,7 +16,10 @@ export default function Dashboard() {
                         <DollarSign className="h-5 w-5 text-muted-foreground" />
                     </CardHeader>
                     <CardContent>
-                        <div className="text-2xl font-bold font-mono">₹6,144,678.00</div>
+                        <div className="text-2xl font-bold font-mono">
+                            <span className="text-lg font-normal text-muted-foreground">₹</span>
+                            6,144,678.00
+                        </div>
                         <p className="text-xs text-muted-foreground">+20.1% from last month</p>
                     </CardContent>
                 </Card>
@@ -26,7 +29,10 @@ export default function Dashboard() {
                         <ShoppingCart className="h-5 w-5 text-muted-foreground" />
                     </CardHeader>
                     <CardContent>
-                        <div className="text-2xl font-bold font-mono">₹6,144,678.00</div>
+                        <div className="text-2xl font-bold font-mono">
+                            <span className="text-lg font-normal text-muted-foreground">₹</span>
+                            6,144,678.00
+                        </div>
                         <p className="text-xs text-muted-foreground">+180.1% from last month</p>
                     </CardContent>
                 </Card>
@@ -36,7 +42,10 @@ export default function Dashboard() {
                         <Package className="h-5 w-5 text-muted-foreground" />
                     </CardHeader>
                      <CardContent>
-                        <div className="text-2xl font-bold font-mono">₹8,540,552.00</div>
+                        <div className="text-2xl font-bold font-mono">
+                            <span className="text-lg font-normal text-muted-foreground">₹</span>
+                            8,540,552.00
+                        </div>
                         <p className="text-xs text-muted-foreground">+19% from last month</p>
                     </CardContent>
                 </Card>
@@ -46,7 +55,10 @@ export default function Dashboard() {
                         <CreditCard className="h-5 w-5 text-muted-foreground" />
                     </CardHeader>
                     <CardContent>
-                        <div className="text-2xl font-bold font-mono">₹3,906,843.00</div>
+                        <div className="text-2xl font-bold font-mono">
+                            <span className="text-lg font-normal text-muted-foreground">₹</span>
+                            3,906,843.00
+                        </div>
                         <p className="text-xs text-muted-foreground">+2% from last month</p>
                     </CardContent>
                 </Card>
