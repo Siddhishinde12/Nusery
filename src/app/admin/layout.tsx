@@ -1,6 +1,7 @@
 import { SidebarProvider } from '@/components/ui/sidebar';
 import '../globals.css';
 import { Toaster } from "@/components/ui/toaster";
+import { AuthProvider, ProtectedRoute } from '@/hooks/use-auth';
 
 export default function AdminLayout({
   children,
@@ -8,15 +9,13 @@ export default function AdminLayout({
   children: React.ReactNode
 }) {
   return (
-      <html lang="en">
-          <body>
-            <div className="bg-background min-h-screen">
-                <SidebarProvider>
-                    {children}
-                </SidebarProvider>
-            </div>
-            <Toaster />
-          </body>
-      </html>
+      <ProtectedRoute>
+        <div className="bg-background min-h-screen">
+            <SidebarProvider>
+                {children}
+            </SidebarProvider>
+        </div>
+        <Toaster />
+      </ProtectedRoute>
   );
 }

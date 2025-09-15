@@ -2,7 +2,10 @@ import Link from 'next/link';
 import { Sprout } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu } from 'lucide-react';
+import { Menu, LogOut, LogIn } from 'lucide-react';
+import { useAuth } from '@/hooks/use-auth';
+import { auth } from '@/lib/firebase';
+import { useRouter } from 'next/navigation';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -14,6 +17,15 @@ const navLinks = [
 ];
 
 export default function Header() {
+  const { user, loading } = useAuth();
+  const router = useRouter();
+
+  const handleLogout = async () => {
+    await auth.signOut();
+    router.push('/');
+  };
+
+
   return (
     <header className="bg-background/80 backdrop-blur-sm sticky top-0 z-40 border-b">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
@@ -27,6 +39,20 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
+          {!loading && (
+            user ? (
+              <Button variant="ghost" size="icon" onClick={handleLogout}>
+                <LogOut className="h-5 w-5" />
+              </Button>
+            ) : (
+              <Button variant="ghost" asChild>
+                <Link href="/login">
+                  <LogIn className="h-5 w-5 mr-2"/>
+                  Login
+                </Link>
+              </Button>
+            )
+          )}
         </nav>
         <div className="md:hidden">
           <Sheet>
@@ -47,6 +73,21 @@ export default function Header() {
                     {link.label}
                   </Link>
                 ))}
+                 {!loading && (
+                    user ? (
+                      <Button variant="ghost" onClick={handleLogout}>
+                        <LogOut className="h-5 w-5 mr-2" />
+                        Logout
+                      </Button>
+                    ) : (
+                      <Button variant="ghost" asChild>
+                        <Link href="/login">
+                           <LogIn className="h-5 w-5 mr-2"/>
+                           Login
+                        </Link>
+                      </Button>
+                    )
+                  )}
               </div>
             </SheetContent>
           </Sheet>
