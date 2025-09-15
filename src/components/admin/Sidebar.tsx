@@ -1,6 +1,6 @@
 'use client';
 import { Sidebar, SidebarMenu, SidebarMenuItem, SidebarMenuButton, SidebarHeader, SidebarTrigger, SidebarContent, SidebarFooter } from '@/components/ui/sidebar';
-import { LayoutDashboard, Package, ShoppingCart, Sprout, Users, Briefcase, DollarSign, Truck, Factory, ClipboardCheck, Users2, BookUser, BarChart2, BookCopy } from 'lucide-react';
+import { LayoutDashboard, Package, ShoppingCart, Sprout, Users, Briefcase, DollarSign, Truck, Factory, ClipboardCheck, Users2, BookUser, BarChart2, BookCopy, BookMarked } from 'lucide-react';
 import Link from 'next/link';
 import type { AdminView } from '@/app/admin/page';
 
@@ -37,6 +37,12 @@ export default function AdminSidebar({ setView }: AdminSidebarProps) {
                         <SidebarMenuButton onClick={() => setView('clients')} tooltip="Client Management">
                             <Briefcase />
                             <span className="group-data-[collapsible=icon]:hidden">Clients</span>
+                        </SidebarMenuButton>
+                    </SidebarMenuItem>
+                     <SidebarMenuItem>
+                        <SidebarMenuButton onClick={() => setView('bookings')} tooltip="Booking Management">
+                            <BookMarked />
+                            <span className="group-data-[collapsible=icon]:hidden">Bookings</span>
                         </SidebarMenuButton>
                     </SidebarMenuItem>
                     <SidebarMenuItem>

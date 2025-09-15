@@ -14,6 +14,7 @@ import HRManager from '@/components/admin/HRManager';
 import AccountsManager from '@/components/admin/AccountsManager';
 import Reports from '@/components/admin/Reports';
 import LedgerManager from '@/components/admin/LedgerManager';
+import BookingManager from '@/components/admin/BookingManager';
 import { SidebarProvider, SidebarInset } from '@/components/ui/sidebar';
 
 export type AdminView =
@@ -29,7 +30,8 @@ export type AdminView =
   | 'hr'
   | 'accounts'
   | 'reports'
-  | 'ledger';
+  | 'ledger'
+  | 'bookings';
 
 export default function AdminPage() {
   const [view, setView] = useState<AdminView>('dashboard');
@@ -62,6 +64,8 @@ export default function AdminPage() {
         return <Reports />;
       case 'ledger':
         return <LedgerManager />;
+      case 'bookings':
+        return <BookingManager />;
       default:
         return <Dashboard />;
     }
