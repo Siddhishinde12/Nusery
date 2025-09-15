@@ -20,6 +20,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Textarea } from '@/components/ui/textarea';
 import { plants as initialPlants, type Plant } from '@/lib/data';
 import { PlusCircle, Edit, Trash2 } from 'lucide-react';
+import { Card } from '@/components/ui/card';
 
 const plantSchema = z.object({
   id: z.string().optional(),
