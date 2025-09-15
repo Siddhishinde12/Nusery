@@ -1,19 +1,19 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
-import { Inter, Merriweather } from 'next/font/google';
+import { Playfair_Display, Lato } from 'next/font/google';
 
-const inter = Inter({
+const lato = Lato({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-inter',
+  variable: '--font-lato',
+  weight: ['400', '700'],
 });
 
-const merriweather = Merriweather({
+const playfairDisplay = Playfair_Display({
   subsets: ['latin'],
   display: 'swap',
-  weight: '700',
-  variable: '--font-merriweather',
+  variable: '--font-playfair-display',
 });
 
 export const metadata: Metadata = {
@@ -30,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${merriweather.variable}`}>
+    <html lang="en" className={`${lato.variable} ${playfairDisplay.variable}`}>
        <head>
       </head>
       <body className="font-body antialiased bg-background text-foreground">
