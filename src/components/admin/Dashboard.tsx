@@ -12,144 +12,42 @@ export default function Dashboard() {
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
                 <Card>
                     <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                        <CardTitle className="text-sm font-medium">Revenue</CardTitle>
+                        <CardTitle className="text-sm font-medium">Total Revenue</CardTitle>
                         <DollarSign className="h-5 w-5 text-muted-foreground" />
                     </CardHeader>
-                    <CardContent className="space-y-2">
-                        <div className="flex justify-between items-baseline">
-                            <span className="text-xs text-muted-foreground">Total Revenue</span>
-                            <span className="text-base font-semibold font-mono text-foreground">₹6,144,678.00</span>
-                        </div>
-                         <div className="flex justify-between items-baseline">
-                            <span className="text-xs text-muted-foreground">Yearly Revenue</span>
-                            <span className="text-sm font-medium font-mono text-foreground">₹6,144,678.00</span>
-                        </div>
-                        <div className="flex justify-between items-baseline">
-                            <span className="text-xs text-muted-foreground">Monthly Revenue</span>
-                            <span className="text-sm font-medium font-mono text-foreground">₹222,965.00</span>
-                        </div>
-                        <div className="flex justify-between items-baseline">
-                            <span className="text-xs text-muted-foreground">Daily Revenue</span>
-                            <span className="text-sm font-medium font-mono text-foreground">₹0.00</span>
-                        </div>
+                    <CardContent>
+                        <div className="text-2xl font-bold font-mono">₹6,144,678.00</div>
+                        <p className="text-xs text-muted-foreground">+20.1% from last month</p>
                     </CardContent>
                 </Card>
                 <Card>
                     <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                        <CardTitle className="text-sm font-medium">Sales</CardTitle>
+                        <CardTitle className="text-sm font-medium">Total Sales</CardTitle>
                         <ShoppingCart className="h-5 w-5 text-muted-foreground" />
                     </CardHeader>
-                    <CardContent className="space-y-2">
-                        <div className="flex justify-between items-baseline">
-                            <span className="text-xs text-muted-foreground">Total Sales</span>
-                            <span className="text-base font-semibold font-mono text-foreground">₹6,144,678.00</span>
-                        </div>
-                         <div className="flex justify-between items-baseline">
-                            <span className="text-xs text-muted-foreground">Yearly Sales</span>
-                            <span className="text-sm font-medium font-mono text-foreground">₹6,144,678.00</span>
-                        </div>
-                        <div className="flex justify-between items-baseline">
-                            <span className="text-xs text-muted-foreground">Monthly Sales</span>
-                            <span className="text-sm font-medium font-mono text-foreground">₹222,965.00</span>
-                        </div>
-                        <div className="flex justify-between items-baseline">
-                            <span className="text-xs text-muted-foreground">Daily Sales</span>
-                             <span className="text-sm font-medium font-mono text-foreground">₹0.00</span>
-                        </div>
+                    <CardContent>
+                        <div className="text-2xl font-bold font-mono">₹6,144,678.00</div>
+                        <p className="text-xs text-muted-foreground">+180.1% from last month</p>
                     </CardContent>
                 </Card>
                 <Card>
                     <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                        <CardTitle className="text-sm font-medium">Purchases</CardTitle>
+                        <CardTitle className="text-sm font-medium">Total Purchases</CardTitle>
                         <Package className="h-5 w-5 text-muted-foreground" />
                     </CardHeader>
-                    <CardContent className="space-y-2">
-                        <div className="flex justify-between items-baseline">
-                            <span className="text-xs text-muted-foreground">Total Purchase</span>
-                            <span className="text-base font-semibold font-mono text-foreground">₹8,540,552.00</span>
-                        </div>
-                         <div className="flex justify-between items-baseline">
-                            <span className="text-xs text-muted-foreground">Yearly Purchase</span>
-                            <span className="text-sm font-medium font-mono text-foreground">₹8,540,552.00</span>
-                        </div>
-                        <div className="flex justify-between items-baseline">
-                            <span className="text-xs text-muted-foreground">Monthly Purchase</span>
-                            <span className="text-sm font-medium font-mono text-foreground">₹89,935.00</span>
-                        </div>
-                        <div className="flex justify-between items-baseline">
-                            <span className="text-xs text-muted-foreground">Daily Purchase</span>
-                             <span className="text-sm font-medium font-mono text-foreground">₹0.00</span>
-                        </div>
+                     <CardContent>
+                        <div className="text-2xl font-bold font-mono">₹8,540,552.00</div>
+                        <p className="text-xs text-muted-foreground">+19% from last month</p>
                     </CardContent>
                 </Card>
                  <Card>
                     <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                        <CardTitle className="text-sm font-medium">Expenses</CardTitle>
+                        <CardTitle className="text-sm font-medium">Total Expenses</CardTitle>
                         <CreditCard className="h-5 w-5 text-muted-foreground" />
                     </CardHeader>
-                    <CardContent className="space-y-2">
-                        <div className="flex justify-between items-baseline">
-                            <span className="text-xs text-muted-foreground">Total Expenses</span>
-                            <span className="text-base font-semibold font-mono text-foreground">₹3,906,843.00</span>
-                        </div>
-                         <div className="flex justify-between items-baseline">
-                            <span className="text-xs text-muted-foreground">Yearly Expenses</span>
-                            <span className="text-sm font-medium font-mono text-foreground">₹3,906,843.00</span>
-                        </div>
-                        <div className="flex justify-between items-baseline">
-                            <span className="text-xs text-muted-foreground">Monthly Expenses</span>
-                            <span className="text-sm font-medium font-mono text-foreground">₹48,474.00</span>
-                        </div>
-                        <div className="flex justify-between items-baseline">
-                            <span className="text-xs text-muted-foreground">Daily Expenses</span>
-                             <span className="text-sm font-medium font-mono text-foreground">₹0.00</span>
-                        </div>
-                    </CardContent>
-                </Card>
-                 <Card className="lg:col-span-2">
-                    <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                        <CardTitle className="text-sm font-medium">Bookings</CardTitle>
-                        <BookCopy className="h-5 w-5 text-muted-foreground" />
-                    </CardHeader>
-                    <CardContent className="space-y-2">
-                       <div className="grid grid-cols-2 gap-x-4">
-                         <div className="space-y-2">
-                            <div className="flex justify-between items-baseline">
-                                <span className="text-xs text-muted-foreground">Total Bookings</span>
-                                <span className="text-base font-semibold font-mono text-foreground">650</span>
-                            </div>
-                            <div className="flex justify-between items-baseline">
-                                <span className="text-xs text-muted-foreground">Yearly Bookings</span>
-                                <span className="text-sm font-medium font-mono text-foreground">650</span>
-                            </div>
-                            <div className="flex justify-between items-baseline">
-                                <span className="text-xs text-muted-foreground">Monthly Bookings</span>
-                                <span className="text-sm font-medium font-mono text-foreground">8</span>
-                            </div>
-                            <div className="flex justify-between items-baseline">
-                                <span className="text-xs text-muted-foreground">Daily Bookings</span>
-                                <span className="text-sm font-medium font-mono text-foreground">2</span>
-                            </div>
-                         </div>
-                         <div className="space-y-2 border-l pl-4">
-                             <div className="flex justify-between items-baseline">
-                                <span className="text-xs text-muted-foreground">Total Plants</span>
-                                <span className="text-base font-semibold font-mono text-foreground">6,902,410</span>
-                            </div>
-                            <div className="flex justify-between items-baseline">
-                                <span className="text-xs text-muted-foreground">Yearly Plants</span>
-                                <span className="text-sm font-medium font-mono text-foreground">6,902,410</span>
-                            </div>
-                            <div className="flex justify-between items-baseline">
-                                <span className="text-xs text-muted-foreground">Monthly Plants</span>
-                                <span className="text-sm font-medium font-mono text-foreground">114,850</span>
-                            </div>
-                            <div className="flex justify-between items-baseline">
-                                <span className="text-xs text-muted-foreground">Daily Plants</span>
-                                <span className="text-sm font-medium font-mono text-foreground">27,000</span>
-                            </div>
-                         </div>
-                       </div>
+                    <CardContent>
+                        <div className="text-2xl font-bold font-mono">₹3,906,843.00</div>
+                        <p className="text-xs text-muted-foreground">+2% from last month</p>
                     </CardContent>
                 </Card>
             </div>
