@@ -10,7 +10,6 @@ const navLinks = [
   { href: '/recommendations', label: 'Recommendation Tool' },
   { href: '/tracking', label: 'Order Tracking' },
   { href: '/contact', label: 'Contact' },
-  { href: '/admin', label: 'Admin' },
 ];
 
 export default function Header() {
