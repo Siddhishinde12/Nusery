@@ -1,6 +1,6 @@
 'use client';
 import { Sidebar, SidebarMenu, SidebarMenuItem, SidebarMenuButton, SidebarHeader, SidebarTrigger, SidebarContent, SidebarFooter } from '@/components/ui/sidebar';
-import { LayoutDashboard, Package, ShoppingCart, Sprout, Users, Briefcase, DollarSign, Truck, Factory, ClipboardCheck, Users2, BookUser, BarChart2 } from 'lucide-react';
+import { LayoutDashboard, Package, ShoppingCart, Sprout, Users, Briefcase, DollarSign, Truck, Factory, ClipboardCheck, Users2, BookUser, BarChart2, BookCopy } from 'lucide-react';
 import Link from 'next/link';
 import type { AdminView } from '@/app/admin/page';
 
@@ -55,6 +55,12 @@ export default function AdminSidebar({ setView }: AdminSidebarProps) {
                         <SidebarMenuButton onClick={() => setView('billing')} tooltip="Billing & Payment">
                             <DollarSign />
                             <span className="group-data-[collapsible=icon]:hidden">Billing</span>
+                        </SidebarMenuButton>
+                    </SidebarMenuItem>
+                     <SidebarMenuItem>
+                        <SidebarMenuButton onClick={() => setView('ledger')} tooltip="Ledger Management">
+                            <BookCopy />
+                            <span className="group-data-[collapsible=icon]:hidden">Ledger</span>
                         </SidebarMenuButton>
                     </SidebarMenuItem>
                     <SidebarMenuItem>

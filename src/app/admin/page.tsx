@@ -13,6 +13,7 @@ import StockTaking from '@/components/admin/StockTaking';
 import HRManager from '@/components/admin/HRManager';
 import AccountsManager from '@/components/admin/AccountsManager';
 import Reports from '@/components/admin/Reports';
+import LedgerManager from '@/components/admin/LedgerManager';
 import { SidebarProvider, SidebarInset } from '@/components/ui/sidebar';
 
 export type AdminView =
@@ -27,7 +28,8 @@ export type AdminView =
   | 'stock_taking'
   | 'hr'
   | 'accounts'
-  | 'reports';
+  | 'reports'
+  | 'ledger';
 
 export default function AdminPage() {
   const [view, setView] = useState<AdminView>('dashboard');
@@ -58,6 +60,8 @@ export default function AdminPage() {
         return <AccountsManager />;
       case 'reports':
         return <Reports />;
+      case 'ledger':
+        return <LedgerManager />;
       default:
         return <Dashboard />;
     }
