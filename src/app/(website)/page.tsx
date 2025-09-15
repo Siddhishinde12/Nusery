@@ -13,7 +13,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative w-full h-[70vh] md:h-[90vh] flex items-center justify-center text-center text-white">
         <Image
-          src="https://picsum.photos/1920/1080"
+          src="https://picsum.photos/seed/1/1920/1080"
           alt="Lush green nursery"
           data-ai-hint="nursery plants"
           fill
